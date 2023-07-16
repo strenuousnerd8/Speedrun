@@ -18,11 +18,7 @@ import sys
 
 def matchingStrings(strings, queries):
     # Write your code here
-    sparse_matrix = []
-    for query in queries:
-        count = sum([1 for i in strings if i == query])
-        sparse_matrix.append(count)
-    return sparse_matrix
+    return [sum([1 for i in strings if i == query]) for query in queries]
 
 
 if __name__ == "__main__":
